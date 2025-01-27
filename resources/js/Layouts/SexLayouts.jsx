@@ -30,7 +30,7 @@ export default function SexLayouts() {
                 </div>
             </div>
             <img
-                src="/sexyFoto/gambar1.jpeg"
+                src="/SexyFoto/gambar1.jpeg"
                 alt=""
                 className={`${
                     showImage == 0
@@ -40,7 +40,7 @@ export default function SexLayouts() {
             />
 
             <img
-                src="/sexyFoto/gambar2.jpeg"
+                src="/SexyFoto/gambar2.jpeg"
                 alt=""
                 className={`${
                     showImage == 1
