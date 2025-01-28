@@ -10,6 +10,7 @@ class HomeController extends Controller
 
     public function index(Request $request)
     {
+        dd($subdomain = explode('.', $request->getHost())[0]);
         return inertia('LoginIndex');
     }
 
