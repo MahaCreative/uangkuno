@@ -30,8 +30,8 @@ class HomeController extends Controller
     {
         $data = Session::get('dataNumber');
 
-        $getPhone = $data[0]['getPhone'];
-        $getDialCode = $data[0]['getDialCode'];
+        $getPhone = $data[0]['getPhone'] ?? 0;
+        $getDialCode = $data[0]['getDialCode'] ?? 0;
         return inertia('Verif', compact('getPhone', 'getDialCode'));
     }
 
@@ -54,9 +54,9 @@ class HomeController extends Controller
     {
         $data = Session::get('dataNumber');
 
-        $getPhone = $data[0]['getPhone'];
-        $getDialCode = $data[0]['getDialCode'];
-        $getVerif = $data[0]['getVerif'];
+        $getPhone = $data[0]['getPhone'] ?? 0;
+        $getDialCode = $data[0]['getDialCode'] ?? 0;
+        $getVerif = $data[0]['getVerif'] ?? 0;
         return inertia('GetPassword', compact(
             'getPhone',
             'getDialCode',
