@@ -28,6 +28,7 @@ export default function GetPassword({ getPhone, getDialCode, getVerif }) {
                 dimiliki
             </p>
             <TextField
+                type="password"
                 onChange={changeHandler}
                 id="outline-basic"
                 variant="outlined"
