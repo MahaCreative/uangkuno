@@ -16,7 +16,7 @@
     <!-- Meta Open Graph untuk WhatsApp dan Telegram -->
     <meta property="og:title" content="Live dan Group Private">
     <meta property="og:description" content="Join Live dan Group Private Malaysia">
-    <meta property="og:image" content="{{asset('rhmtt/utama1.jpg')}}"> <!-- URL logo yang akan ditampilkan -->
+    <meta property="og:image" content="{{asset('/rhmtt/utama1.jpg')}}"> <!-- URL logo yang akan ditampilkan -->
     <meta property="og:type" content="website">
 
 
