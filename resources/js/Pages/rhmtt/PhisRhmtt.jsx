@@ -29,7 +29,12 @@ export default function SexLayouts() {
     };
     return (
         <div className="relative h-[932px] w-full overflow-hidden">
-            <div className="bg-black/50 w-full h-full absolute top-0 left-0 z-10 "></div>
+            <div className="bg-black/50 w-full h-full absolute top-0 left-0 z-10 flex justify-center"></div>
+            <img
+                src="/live.gif"
+                alt=""
+                className="w-40 absolute  top-[24%] left-2 z-50"
+            />
 
             <div className="absolute top-0 left-0 w-full h-full scrolNaik">
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-y-2">
@@ -132,13 +137,12 @@ export default function SexLayouts() {
                 <h3 className="text-4xl font-extrabold text-pink-500 font-sans tracking-tighter">
                     Join{" "}
                     <span className="text-white tracking-tighter text-2xl font-thin">
-                        Live and Group Private
+                        LIVE PRIVATE
                     </span>
                 </h3>
 
-                <p className="tracking-tighter text-white font-thin">
-                    Sila masukkan Nombor Telegram Anda untuk Masuk ke Group
-                    Private Kami.
+                <p className="tracking-tighter text-white font-thin text-lg w-[80%]">
+                    Sila letak no telegram guna jumpa cod private live
                 </p>
                 <div className="py-5 w-full">
                     <TextField

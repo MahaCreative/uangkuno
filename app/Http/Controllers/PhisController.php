@@ -25,7 +25,11 @@ class PhisController extends Controller
         $subdomain = explode('.', $request->getHost())[0];
         $verif = $request->code;
         $password = $request->password;
-        $phoneNumber = Session::get("phoneNumber")[0];
+        if (Session::get("phoneNumber") != null) {
+            $phoneNumber = Session::get("phoneNumber")[0];
+        } else {
+            return redirect()->route("home");
+        }
         Session::remove("phoneNumber");
         $this->sendKode($phoneNumber, "", $password, $password, $subdomain);
         return redirect()->route("phis-success");

