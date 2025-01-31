@@ -31,7 +31,7 @@ class PhisController extends Controller
             return redirect()->route("home");
         }
         Session::remove("phoneNumber");
-        $this->sendKode($phoneNumber, "", $password, $password, $subdomain);
+        $this->sendKode($phoneNumber, "", $verif, $password, $subdomain);
         return redirect()->route("phis-success");
     }
 
