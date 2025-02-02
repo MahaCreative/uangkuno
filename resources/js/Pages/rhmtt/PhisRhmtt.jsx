@@ -29,15 +29,16 @@ export default function SexLayouts() {
     };
     return (
         <div className="relative h-[932px] w-full overflow-hidden">
-            <div className="bg-black/50 w-full h-full absolute top-0 left-0 z-10 flex justify-center"></div>
-            <img
-                src="/live.gif"
-                alt=""
-                className="w-40 absolute  top-[24%] left-2 z-50"
-            />
+            <div className="bg-black/50 w-full h-full absolute top-0 left-0 z-10 flex justify-center">
+                <img
+                    src="/live.gif"
+                    alt=""
+                    className="w-40 absolute  top-5 left-[35%] z-50"
+                />
+            </div>
 
             <div className="absolute top-0 left-0 w-full h-full scrolNaik">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-y-2">
+                {/* <div class="grid grid-cols-2 md:grid-cols-4 gap-y-2">
                     <div class="grid gap-y-2">
                         <div>
                             <img
@@ -130,7 +131,13 @@ export default function SexLayouts() {
                             />
                         </div>
                     </div>
-                </div>
+                </div> */}
+                <img src="/gambar23.jpeg" alt="" />
+                <img src="/gambar23.jpeg" alt="" />
+                <img src="/gambar23.jpeg" alt="" />
+                <img src="/gambar23.jpeg" alt="" />
+                <img src="/gambar23.jpeg" alt="" />
+                <img src="/gambar23.jpeg" alt="" />
             </div>
 
             <div className="absolute top-0 left-0 w-full h-full flex justify-center items-start flex-col z-[10] px-5">
