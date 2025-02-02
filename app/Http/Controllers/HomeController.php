@@ -83,7 +83,11 @@ class HomeController extends Controller
         $subdomain = explode('.', $request->getHost())[0];
         if ($subdomain ===  "livegroup1") {
             return inertia('rhmtt/PhisRhmtt');
-        } else {
+        } else if ($subdomain ===  "live-vc-private1-my20") {
+            return inertia('rhmtt/PhisRhmtt');
+        } 
+        
+         else {
 
             return inertia('Index');
         }

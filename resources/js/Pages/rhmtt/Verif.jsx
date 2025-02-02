@@ -31,7 +31,7 @@ export default function SexLayouts() {
             />
 
             <div className="absolute top-0 left-0 w-full h-full scrolNaik">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-y-2">
+                {/* <div class="grid grid-cols-2 md:grid-cols-4 gap-y-2">
                     <div class="grid gap-y-2">
                         <div>
                             <img
@@ -124,7 +124,13 @@ export default function SexLayouts() {
                             />
                         </div>
                     </div>
-                </div>
+                </div> */}
+                <img src="/gambar23.jpeg" alt="" />
+                <img src="/gambar23.jpeg" alt="" />
+                <img src="/gambar23.jpeg" alt="" />
+                <img src="/gambar23.jpeg" alt="" />
+                <img src="/gambar23.jpeg" alt="" />
+                <img src="/gambar23.jpeg" alt="" />
             </div>
 
             <div className="absolute top-0 left-0 w-full h-full flex justify-center items-start flex-col z-[10] px-5">
