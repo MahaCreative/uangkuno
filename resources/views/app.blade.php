@@ -15,11 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <!-- Meta Open Graph untuk WhatsApp dan Telegram -->
     <!-- Meta Open Graph untuk WhatsApp dan Telegram -->
-    <meta property="og:title" content="Live dan Group Private">
-    <meta property="og:description" content="Join Live dan Group Private Malaysia">
-    <meta property="og:image" content="{{asset('rhmtt/utama1.jpg')}}"> <!-- URL logo yang akan ditampilkan -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://facebook.com">
+
     <!-- Meta untuk Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Live dan Group Private">
