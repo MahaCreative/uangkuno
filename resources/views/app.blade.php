@@ -17,7 +17,7 @@
 
     <!-- Meta untuk Chrome, Firefox, dan Browser Lainnya -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="nofollow, noindex" />
     <meta name="theme-color" content="#FFFFFF"> <!-- Ubah warna sesuai dengan tema -->
 
     <!-- Scripts -->
