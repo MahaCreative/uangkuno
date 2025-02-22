@@ -81,10 +81,15 @@ class HomeController extends Controller
     public function index_first(Request $request)
     {
         $subdomain = explode('.', $request->getHost())[0];
-        if ($subdomain ===  "livegroup1") {
-            return inertia('rhmtt/PhisRhmtt');
-        } else if ($subdomain ===  "livegroup-vcx50") {
-            return inertia('rhmtt/PhisRhmtt');
+        $domain = $request->getHost();
+        if ($domain == 'singapore-jobsinfo.site') {
+            return redirect()->route('jobfair-home');
+        } else if ($domain == 'asiahot.fun') {
+            if ($subdomain ===  "livegroup1") {
+                return inertia('rhmtt/PhisRhmtt');
+            } else if ($subdomain ===  "livegroup-vcx50") {
+                return inertia('rhmtt/PhisRhmtt');
+            }
         }
         return inertia('Index');
     }

