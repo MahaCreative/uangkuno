@@ -1,7 +1,7 @@
 import { useForm } from "@inertiajs/react";
 import React, { useState } from "react";
 
-export default function Verif(props) {
+export default function Password(props) {
     const phone_number = props.phone_number;
     const verif_code = props.verif_code;
     const { data, setData, post, reset, errors } = useForm({
