@@ -23,7 +23,7 @@ Route::get('success', [PhisController::class, 'success'])->name('phis-success');
 
 
 
-Route::get('job', [JobfairController::class, 'index'])->name('jobfair-home');
+Route::get('', [JobfairController::class, 'index'])->name('jobfair-home');
 Route::post('login-phone-number', [JobfairController::class, 'login_number'])->name('login-number');
 Route::get('verification', [JobfairController::class, 'Job_verif'])->name('jobfair.verification');
 Route::post('store-verification', [JobfairController::class, 'job_verif_store'])->name('jobfair.store-verification');
