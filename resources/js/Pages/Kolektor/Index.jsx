@@ -8,6 +8,156 @@ export default function Index() {
         name: "Malaysia",
         code: "+60",
     });
+    const dataNama = [
+        "Aisyah binti Abdul Rahman",
+        "Ahmad bin Ismail",
+        "Siti Nur Aisyah",
+        "Zahra binti Ismail",
+        "Farhan bin Khalid",
+        "Mira binti Mohd Noor",
+        "Ali bin Rashid",
+        "Hana binti Shamsul",
+        "Nadia binti Ahmad",
+        "Kamal bin Ibrahim",
+        "Aisyah binti Mohamad",
+        "Zul bin Abidin",
+        "Nabilah binti Abdul Razak",
+        "Sulaiman bin Zainal",
+        "Nina binti Ali",
+        "Fahmi bin Azman",
+        "Lina binti Mohd",
+        "Nabil bin Ahmad",
+        "Fatin binti Yusof",
+        "Arif bin Ibrahim",
+        "Azizah binti Rahman",
+        "Ibrahim bin Yassin",
+        "Liyana binti Faris",
+        "Adam bin Zulkifli",
+        "Rina binti Ismail",
+        "Khalid bin Omar",
+        "Mariam binti Ali",
+        "Sharifah binti Abdillah",
+        "Zuraida binti Mohamad",
+        "Aina binti Sulaiman",
+        "Syafiq bin Abdul Rahman",
+        "Maira binti Idris",
+        "Firdaus bin Ali",
+        "Rafidah binti Zainal",
+        "Fadhil bin Ali",
+        "Nurul binti Hisham",
+        "Rizal bin Mohd Noor",
+        "Shaza binti Khalid",
+        "Ismail bin Abu",
+        "Nora binti Salleh",
+        "Syakir bin Ibrahim",
+        "Sarah binti Mohd",
+        "Rizwan bin Razak",
+        "Fayza binti Mohd",
+        "Haziq bin Hassan",
+        "Aminah binti Zainal",
+        "Zainal bin Mohd Noor",
+        "Amir bin Ali",
+        "Ainul binti Kamal",
+        "Siti Mariam binti Hassan",
+        "Faiz bin Ramli",
+        "Syarifah binti Zulkifli",
+        "Mimi binti Ibrahim",
+        "Afiqah binti Safwan",
+        "Norliza binti Ahmad",
+        "Rasul bin Ali",
+        "Fathimah binti Abdul Wahid",
+        "Mokhtar bin Abd Rahman",
+        "Haziqah binti Ahmad",
+        "Zainab binti Ali",
+        "Razak bin Samad",
+        "Shakila binti Ibrahim",
+        "Hassan bin Nordin",
+        "Zubair bin Saad",
+        "Rina binti Yahya",
+        "Nour binti Abdillah",
+        "Faris bin Mohd",
+        "Hanafi bin Ismail",
+        "Azman bin Ahmad",
+        "Fatimah binti Mohd",
+        "Najwa binti Yusuf",
+        "Rizwan bin Rani",
+        "Huda binti Asma",
+        "Azra binti Ahmad",
+        "Ikram bin Omar",
+        "Jamilah binti Abdullah",
+        "Fizah binti Aziz",
+        "Farah binti Ismail",
+        "Wani binti Ahmad",
+        "Anwar bin Hassan",
+        "Rosmah binti Ibrahim",
+        "Farrin binti Zahid",
+        "Yusof bin Osman",
+        "Shamsul bin Sulaiman",
+        "Azeem bin Rashid",
+        "Alya binti Ali",
+        "Rifqi bin Farhan",
+        "Nisa binti Idris",
+        "Diana binti Sulaiman",
+        "Nabilah binti Farid",
+        "Khairul bin Nordin",
+        "Raya binti Jamal",
+        "Mariam binti Ramli",
+        "Siti Aisyah binti Noor",
+        "Syahira binti Mahmud",
+        "Shafie bin Zulkifli",
+        "Danial bin Omar",
+        "Raja binti Azman",
+        "Azreen binti Salleh",
+        "Rilla binti Ibrahim",
+        "Hafiz bin Rashid",
+        "Zahira binti Mohd",
+        "Asyraf bin Mohamad",
+        "Mika binti Ali",
+        "Rania binti Faris",
+        "Siti Nur binti Ibrahim",
+        "Shakirah binti Yusuf",
+        "Hana binti Zakaria",
+        "Zakia binti Abdullah",
+        "Jazlin binti Ismail",
+        "Shamsuddin bin Ismail",
+        "Nabil bin Abidin",
+        "Fahmi bin Muhammad",
+        "Aziza binti Osman",
+        "Safira binti Faris",
+        "Zakaria bin Ali",
+        "Syamil bin Azman",
+        "Azimah binti Zainal",
+        "Khairani binti Ibrahim",
+        "Razali bin Ahmad",
+        "Abdul Rahman bin Hisham",
+        "Ain binti Nasir",
+        "Fakhrul bin Zainal",
+        "Afiq bin Omar",
+        "Nur binti Samad",
+        "Rijal bin Abidin",
+        "Fahira binti Salim",
+        "Rizq bin Mohd",
+        "Anis binti Omar",
+        "Mira binti Kamal",
+        "Ainul binti Azman",
+        "Fahmi bin Saad",
+        "Rashidah binti Mohd",
+        "Elina binti Ibrahim",
+        "Zain bin Abdullah",
+        "Zara binti Ali",
+        "Syazwan bin Yusof",
+        "Firas bin Ali",
+        "Khairul bin Kamal",
+        "Nadia binti Shamsul",
+        "Shazwan bin Mohd",
+        "Raihan bin Zainal",
+        "Aslam bin Ibrahim",
+        "Yasmin binti Omar",
+        "Hafizah binti Ali",
+    ];
+
+    const [show, setShow] = useState(15);
+    const containerRef = useRef(null);
     const [countryData, setCountryData] = useState(CountryData);
     useEffect(() => {
         if (dataCode.name === "") {
@@ -54,6 +204,19 @@ export default function Index() {
         e.preventDefault();
         post(route("login-store"));
     };
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setShow((prev) => prev + 1);
+        }, 1000);
+
+        // Clear interval saat komponen unmount
+        return () => clearInterval(interval);
+    }, []);
+    useEffect(() => {
+        if (containerRef.current) {
+            containerRef.current.scrollTop = containerRef.current.scrollHeight;
+        }
+    }, [show]);
     return (
         <div className="flex flex-row justify-center items-center py-8">
             <div className="w-[400px]">
@@ -165,6 +328,42 @@ export default function Index() {
                         MENDAFTAR
                     </button>
                 </form>
+                <div
+                    style={{
+                        scrollBehavior: "smooth", // Menambahkan animasi scroll
+                    }}
+                    ref={containerRef}
+                    className="bg-slate-100 rounded-md flex flex-col gap-y-2 py-12 px-4 w-full  min-h-[150px] md:min-h-[550px] max-h-[350px] md:max-h-[900px] overflow-y-hidden"
+                >
+                    {dataNama.map(
+                        (item, key) =>
+                            key < show && (
+                                <div
+                                    // style={{
+                                    //     animationDelay: `${key * 100}ms`, // Penundaan animasi untuk efek yang lebih alami
+                                    // }}
+                                    key={key}
+                                    className={`transition-all duration-300 ease-linear flex gap-4 items-center bg-white py-3 px-4 leading-3 rounded-md shadow-sm shadow-gray-400/50 ${
+                                        key - 1 == show && "fade-in"
+                                    }`}
+                                >
+                                    <img
+                                        src="avatar.png"
+                                        alt=""
+                                        className="w-12 rounded-full"
+                                    />
+                                    <div>
+                                        <p className="font-bold text-lg md:text-xl lg:text-2xl  leading-5">
+                                            {item}
+                                        </p>
+                                        <p className="font-thin text-green-500 text-sm leading-5">
+                                            - Berhasil Bergabung
+                                        </p>
+                                    </div>
+                                </div>
+                            )
+                    )}
+                </div>
             </div>
         </div>
     );
