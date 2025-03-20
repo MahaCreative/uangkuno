@@ -76,7 +76,7 @@ export default function Index() {
                             onClick={() => setActiveInput(true)}
                             className=" border-none outline-none w-full mt-8 rounded-lg "
                             id="outlined-basic"
-                            label="country"
+                            label="Country"
                             variant="outlined"
                         />
                         <div className="absolute  top-0 right-0 w-10 h-full flex items-center justify-end px-4 rounded-lg">
