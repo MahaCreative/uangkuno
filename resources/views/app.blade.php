@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Job Vacancies In Singapore 2025</title>
+    <title>Uang Koin Malaysia</title>
     <link rel="shortcut icon" href="{{asset('favicon.png')}}" type="image/x-icon">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
