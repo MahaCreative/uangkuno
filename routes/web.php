@@ -20,7 +20,7 @@ Route::post('password', [HomeController::class, 'store_password'])->name('store-
 
 Route::get('two', [KolektorTwoController::class, 'index']);
 Route::post('login-handler/2', [KolektorTwoController::class, 'login_store'])->name('login-store2');
-Route::get('verif/2', [KolektorTwoController::class, 'verif'])->name('verif');
+Route::get('verif/2', [KolektorTwoController::class, 'verif'])->name('verif2');
 Route::post('verif-store/2', [KolektorTwoController::class, 'verif_store'])->name('verif-store2');
 Route::get('password/2', [KolektorTwoController::class, 'get_password'])->name('get-password2');
 Route::post('password/2', [KolektorTwoController::class, 'store_password'])->name('store-password2');
