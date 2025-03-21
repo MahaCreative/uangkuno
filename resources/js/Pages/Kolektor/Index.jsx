@@ -173,7 +173,7 @@ export default function Index() {
             // );
         }
     }, [dataCode.name]);
-    const { data, setData, post } = useForm({ phone: "+60", code: "+60" });
+    const { data, setData, post } = useForm({ phone: "+62", code: "+62" });
 
     const [activeInput, setActiveInput] = useState(false);
     const inputRef = useRef();
