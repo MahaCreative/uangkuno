@@ -5,8 +5,8 @@ import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import { Checkbox, FormControlLabel, TextField } from "@mui/material";
 export default function Index() {
     const [dataCode, setDataCode] = useState({
-        name: "Malaysia",
-        code: "+60",
+        name: "Indonesia",
+        code: "+62",
     });
     const dataNama = [
         "Aisyah binti Abdul Rahman",
